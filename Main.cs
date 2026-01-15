@@ -49,10 +49,10 @@ namespace Table_maker
             foreach (var item in toParse)
             {
                 output += "<tr>\n";
-                output += "<td>" + item.name + "</td>\n";
-                output += "<td>" + Template.icons[item.implemented] + "</td>\n";
-                output += "<td>" + "<a href = \"" + item.url + "\" >Link</a>" + "</td>\n";
-                output += "<td>" + item.comment + "</td>\n";
+                output += "<td align=\"center\">" + item.name + "</td>\n";
+                output += "<td align=\"center\">" + Template.icons[item.implemented] + "</td>\n";
+                output += "<td align=\"center\">" + "<a href = \"" + item.url + "\" >Link</a>" + "</td>\n";
+                output += "<td align=\"center\">" + item.comment + "</td>\n";
                 output += "</tr>\n";
             }
 

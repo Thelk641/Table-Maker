@@ -10,15 +10,14 @@ namespace Table_maker
     {
         private static void Main(string[] args)
         {
+
+
 #if DEBUG
-            args = new string[1] { "D:\\Unity\\Table maker\\Raw game list.txt" };
+            args = new string[2] { "D:\\Unity\\Table maker\\Raw game list.txt", "D:\\Unity\\Table maker\\gameList.html" };
 #endif
             List<Game> gameList = ParseRawData(args[0]);
 
-            string folder = AppContext.BaseDirectory;
-            string path = Path.Combine(folder, "GameList.html");
-
-            File.WriteAllText(path, ParseHTML(gameList));
+            File.WriteAllText(args[1], ParseHTML(gameList));
         }
 
         static private List<Game> ParseRawData(string path)

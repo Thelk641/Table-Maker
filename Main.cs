@@ -15,7 +15,10 @@ namespace Table_maker
 #endif
             List<Game> gameList = ParseRawData(args[0]);
 
-            Trace.WriteLine(ParseHTML(gameList));
+            string folder = AppContext.BaseDirectory;
+            string path = Path.Combine(folder, "GameList.html");
+
+            File.WriteAllText(path, ParseHTML(gameList));
         }
 
         static private List<Game> ParseRawData(string path)

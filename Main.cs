@@ -23,8 +23,14 @@ namespace Table_maker
 
             foreach (var item in toParse.Split("\n"))
             {
-                Game toAdd = new Game();
+                
                 string[] cut = item.Split("/");
+                if(cut.Length < 4)
+                {
+                    continue;
+                }
+
+                Game toAdd = new Game();
                 toAdd.name = cut[0].Trim();
                 toAdd.implemented = cut[1].Trim();
                 toAdd.url = cut[2].Trim();

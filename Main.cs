@@ -10,11 +10,6 @@ namespace Table_maker
     {
         private static void Main(string[] args)
         {
-
-
-#if DEBUG
-            args = new string[2] { "D:\\Unity\\Table maker\\Raw game list.txt", "D:\\Unity\\Table maker\\gameList.html" };
-#endif
             List<Game> gameList = ParseRawData(args[0]);
 
             File.WriteAllText(args[1], ParseHTML(gameList));
